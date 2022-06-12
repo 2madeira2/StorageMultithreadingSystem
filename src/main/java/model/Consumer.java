@@ -24,8 +24,9 @@ public class Consumer extends Thread {
     }
 
     public void buyProduct() {
+        Random randomizer = new Random();
         while (storage.getQuantityGoods() > 0) {
-            purchasedGoodsCount += storage.buyFromStorage(new Random().nextInt(1, 11));
+            purchasedGoodsCount += storage.buyFromStorage(randomizer.nextInt(10) + 1);
             purchasesCount++;
             try {
                 barrier.await();
