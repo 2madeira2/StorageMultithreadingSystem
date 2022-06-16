@@ -23,7 +23,7 @@ public class MainApp {
         try {
             Integer.parseInt(args[0]);
         } catch (NumberFormatException e) {
-            System.out.println("Параметр должен быть числом!");
+            System.out.println("Параметр должен быть целым числом!");
             return false;
         }
         return true;
